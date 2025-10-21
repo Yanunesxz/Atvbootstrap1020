@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+/* Navbar */
+.navbar-brand {
+  color: #3b36f6;
+  font-weight: 700;
+}
+
+.navbar .btn {
+  font-weight: 600;
+}
+
+/* HERO com vídeo de fundo */
+.hero-bg {
+  min-height: 60vh;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60vh;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Overlay opcional para texto mais legível */
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-bg .container,
+.hero-bg .position-relative {
+  position: relative;
+  z-index: 2;
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-bg h1,
+.hero-bg p {
+  color: #fff;
+}
+
+.hero-bg .btn-light {
+  background: #fff;
+  color: #3b36f6;
+  border-radius: 8px;
+}
+.hero-bg .btn-outline-light {
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.hero-bg .btn-light:hover,
+.hero-bg .btn-outline-light:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
+}
+
+/* Destaques do Dia */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.card.bg-danger,
+.card.bg-primary,
+.card.bg-success {
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.fs-1 {
+  font-size: 2.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Últimas Notícias */
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-body {
+  padding: 1rem 1rem;
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.card .h6,
+.card .small,
+.card .card-title,
+.card .card-text,
+.card time {
+  margin-bottom: 0.5rem;
+}
+
+/* Estatísticas */
+.p-4 {
+  border-radius: 12px !important;
+  font-weight: 600;
+  background: #fbfbfb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+}
+
+.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Footer */
+footer.bg-dark {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+footer.bg-dark .small {
+  opacity: 0.8;
+}
+
+/* Responsividade usada pelo Bootstrap, mas algumas adaptações externas */
+@media (max-width: 992px) {
+  .hero-video,
+  .hero-bg::before {
+    height: 48vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-bg {
+    min-height: 44vh;
+  }
+  .hero-video,
+  .hero-bg::before {
+    height: 44vh;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .fs-1 {
+    font-size: 1.6rem;
+  }
+  .card-img-top {
+    height: 120px;
+  }
+}
